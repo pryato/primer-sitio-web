@@ -1,0 +1,264 @@
+:root {
+    --blanco: #fff;
+    --negro: #000;
+    --celeste:cornflowerblue;
+    --amarillo: #f5c242;
+    --gris: #bcc7a3;
+    --grisclaro: #c9ced6;
+}
+/* GLOBALES */
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    scroll-snap-type: y proximity;
+}
+*, *:before, *:after {
+    box-sizing: inherit; /*Box sizing*/
+  }
+body {
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif, Arial;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 70%);
+}
+.contenedor {
+    max-width:120rem;
+    margin: 0 auto;
+}
+
+.boton{
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color:var(--blanco);
+    padding:1rem 3rem;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 90%;
+    border: none;
+}
+.boton:hover{
+    background-color: var(--amarillo);
+    color:var(--negro);
+    cursor: pointer;
+}
+@media (min-width:480px) {
+    .boton{ 
+    width: auto;
+    }
+}
+
+.sombra {
+    -webkit-box-shadow: 0px 9px 24px -4px rgba(97,97,97,0.63);
+    -moz-box-shadow: 0px 9px 24px -4px rgba(97,97,97,0.63);
+    box-shadow: 0px 9px 24px -4px rgba(97,97,97,0.63);
+    background-color: var(--blanco);
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+/*Tipografia*/
+h1 {
+    font-size: 3.8rem; /* 1 rem = 10px*/
+
+}
+h2 {
+    font-size: 2.8rem;
+
+}
+h3 {
+    font-size: 1.8rem;
+    color: var(--celeste);
+    font-weight: 580;
+
+}
+h1,h2,h3{
+    text-align: center;
+
+/*Titulos*/
+}
+
+
+.title span {
+    font-size: 3.8rem;
+    
+}
+/*Navegacion-principal*/
+.nav-bg {
+    background-color: cornflowerblue;
+}
+.navegacion-principal {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.navegacion-principal a{
+    display:block;
+    text-align: center;
+    padding: 1rem;
+    color: var(--blanco);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: normal;
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--amarillo);
+    color: var(--negro);
+}
+
+/*Hero*/
+.hero {
+    background-image: url(../imagenes/hero.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    height:35rem;
+    position:relative;
+    margin-bottom: 2rem;
+}
+.contenido-hero {
+    position:absolute;
+    background-color: rgba(0, 0, 0, .45);
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.contenido-hero h2, .contenido-hero p{
+    color: var(--blanco);
+}
+.contenido-hero .location {
+    margin-top: -0.1rem;
+}
+/*servicios*/
+
+@media (min-width: 768px) {
+    .servicios{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) ;
+        column-gap: 5rem;
+
+    }
+}
+.servicio {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center;
+    scroll-snap-stop: always;
+}
+.servicios p {
+    line-height: 1.8;
+    text-align: justify;
+}
+.servicio .iconos {
+    display: flex;
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--grisclaro);
+    border-radius: 50%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+/*contacto*/
+.formulario {
+    background-color: #d1cfcb;
+    border-radius: 1rem;
+    width: min(60rem, 100%);
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: 550;
+}
+.contenedorcampos label{
+    margin-bottom: 0.5rem;
+    display: block;
+    
+}
+fieldset {
+    width: 100%;
+    border: none;
+    padding: 1.5rem;
+}
+
+.enviar .boton{
+    width: 100%;
+}
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    margin-bottom: 0.5rem;
+    display:block;
+}
+
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    margin-bottom: .5rem;
+    display: block;
+
+}
+.input1 {
+    border: none;
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+/*aux*/
+
+.w100 {
+    width: 100%;
+}
+.alinear-derecha {
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .alinear-derecha{
+        justify-content: flex-end;
+    }
+    
+}
+.flex {
+    display: flex;
+}
+@media (min-width: 768px) {
+    .w100 {display: auto;
+    }
+}
+.w-50 {
+    width: 50%;
+}
+.p-r {
+    padding-right: 10px;
+}
+
